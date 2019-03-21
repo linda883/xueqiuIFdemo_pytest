@@ -14,8 +14,8 @@ def test_steps_demo():
         driver.find_element_by_id('su').click()
         time.sleep(5)
     with allure.step('step three：截图保存到项目中'):
-        driver.save_screenshot("b.png")
-        f = open('/Users/lindafang/PycharmProjects/xueqiuIFdemo_pytest/demo1/b.png', 'rb').read()
+        driver.save_screenshot("/Users/lindafang/PycharmProjects/xueqiuIFdemo_pytest/demo1/result/b.png")
+        f = open('/Users/lindafang/PycharmProjects/xueqiuIFdemo_pytest/demo1/result/b.png', 'rb').read()
         allure.attach('this is  图片', f, allure.attachment_type.PNG)
     with allure.step('step four：关闭浏览器，退出'):
         driver.quit()
