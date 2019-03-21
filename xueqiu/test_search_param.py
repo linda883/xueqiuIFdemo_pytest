@@ -18,7 +18,6 @@ def _base_data(file_name):
 def get_base_data():
     base_data = _base_data('test_search.yml')
     for v in base_data.values():
-        # print(v)
         return v
 
 

@@ -18,7 +18,6 @@ def _base_data(file_name):
 def get_base_data():
     base_data = _base_data('test_search.yml')
     for v in base_data.values():
-        # print(v)
         return v
 
 
@@ -35,8 +34,8 @@ def test_search(get_test_data, get_base_data):
     url = get_base_data.get('url')
     headers = get_base_data.get('header')
 
-    res = requests.request(method=method, url=url, headers=headers, params=get_test_data)
-    print(res.text)
+    # res = requests.request(method=method, url=url, headers=headers, params=get_test_data)
+    # print(res.text)
 
 
 
