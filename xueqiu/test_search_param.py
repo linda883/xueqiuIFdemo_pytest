@@ -2,7 +2,7 @@ import requests
 import pytest
 import os
 import yaml
-
+import allure
 
 def _base_data(file_name):
 
@@ -35,6 +35,7 @@ def query_param(request):
     return request.param
 
 
+@allure.title("参数化: adding {query_param} 到请求中")
 @pytest.mark.parametrize("query_param", test_user_data2, indirect=True)
 def test_search(get_base_data, query_param):
 

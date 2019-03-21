@@ -8,7 +8,7 @@ import pytest
 @allure.testcase("https://www.baidu.com的搜索功能")
 def test_steps_demo():
     with allure.step('step one:打开浏览器输入百度网址'):
-        driver = webdriver.Chrome()
+        driver = webdriver.Chrome(executable_path='/Users/lindafang/PycharmProjects/xueqiuIFdemo_pytest/driver/chromedriver')
         driver.get('https://www.baidu.com')
     with allure.step('step two：在搜索栏输入allure,并点击百度一下'):
         driver.find_element_by_id('kw').send_keys('allure')
